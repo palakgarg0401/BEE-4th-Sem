@@ -1,0 +1,6 @@
+# What is Middleware??
+Middleware is a function which runs between request and response. It has access to request & response object.
+# Running a Middleware
+a) At Application level ---> app.use(middleware_name);
+  	if we run a middleware at application level then it will run on every request.
+	middleware run in the order it is called.
