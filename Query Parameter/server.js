@@ -116,3 +116,25 @@ app.get("/profile/:name", (req, res)=>{
     }
     res.send(`<center><h1> User Not Found</h1></center>`);
 });
+
+app.get("/deleteuserbyId/:id", (req,res)=>{
+    let {id} = req.params;
+    for(let i=0; i<userdata.length;i++){
+        if(userdata[i].id==id){
+            userdata.splice(i, 1);
+            return res.send(`<center><h1> User Deleted</h1></center>`);
+        }
+    }
+    res.send(`<center><h1> User Not Found</h1></center>`);
+});
+
+app.get("/adduserbyId/:id/:name/:address", (req,res)=>{
+    let {id, name, address} = req.params;
+    let newUser = {
+        id: id,
+        name: name,
+        address: address
+    }
+    userdata.push(newUser);
+    res.send(`<center><h1> User Added</h1></center>`);
+});
