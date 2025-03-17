@@ -1,0 +1,24 @@
+Databases  
+    |
+Collections
+    |
+Documents
+
+Advantage -> NoSql is easy to scale and to implement
+Drawback -> There is no schema 
+
+MongoShell -> Command Line Interface
+    |
+    |-> mongosh (command) to check the MongoShell
+
+To check the databases present in the MongoDB -> show dbs
+To swtch between databases we use -> use db_name (command)
+If database is not present new database will be created -> use db_name (command)
+Same for collections...
+
+For inserting documents -> db.collection_name.(query)insertOne({document_name}) (for single) 
+                           db.collection_name.(query)insertMany({document_name}) (for multiple)
+
+db.collection_name.find() (to find all the document)
+for specific condition -> we have to pass filter conditions
+db.collection_name.find({age:{$gt:18}})
