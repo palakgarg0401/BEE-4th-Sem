@@ -1,0 +1,8 @@
+Mongoose -> ODM (Object Document Mapper)
+
+classes ---map--> collections
+
+1.Schema -> structure of database. schema can be created in mongodb using mongoose
+2.Model -> we have to create model to use the schema. the mongoose will create a model(class) for the schema
+
+mongoose.connect() -> return promise
