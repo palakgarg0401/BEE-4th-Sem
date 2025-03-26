@@ -1,0 +1,11 @@
+Restful API -> follows Rest Architecture
+
+Rest Architecture --> Resource-based Architecture
+if you want to perform CRUD operation on your resources you have to create routes using (http verb)
+
+http verb :
+-> get (read) app.get
+-> post (create) app.post
+-> delete (delete) app.delete
+-> put (update) app.put
+-> patch (update) app.patch
