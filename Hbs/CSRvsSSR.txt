@@ -10,6 +10,9 @@ files are render by browser
 more load on server (disadvantage)
 to run file on server or perform server side rendering we need third party template engine (e.g. ejs, hbs{handlBars})
 
+server and client deals with each other using request and response cycle
+
+
 search engine optimization
 off side using links which are displayed ranking is done
 on side using keyboards
