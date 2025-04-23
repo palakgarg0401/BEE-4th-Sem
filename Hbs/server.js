@@ -14,8 +14,18 @@ app.use(express.json());
 app.use("/users", userRoutes); //will work on every request with base path /users
 
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("home", {
+        name : "Palak"
+    });
 })
+
+app.get("/user", (req, res) => {
+    res.render("user", {
+        name : "Palak",
+        email : "gargpalak0401@gmail.com"
+    })
+})
+
 app.use("/blogs", blogRoutes);
 
 mongoose.connect('mongodb://127.0.0.1:27017').then(() => console.log('Mongodb Connected!'));
