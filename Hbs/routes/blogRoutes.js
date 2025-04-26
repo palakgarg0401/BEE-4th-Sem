@@ -16,10 +16,17 @@ router.post("/", async(req, res) => {
 });
 
 //read all blogs
+// router.get("/", async(req, res) => {
+//     let allblogs = await Blog.find(); //find func returns array
+//     res.send(allblogs);
+// });
+
 router.get("/", async(req, res) => {
     let allblogs = await Blog.find();
-    res.send(allblogs);
-});
+    res.render("blogs", {
+        data : allblogs
+    });
+})
 
 //read one Blog
 router.get("/:title", async(req, res) => {

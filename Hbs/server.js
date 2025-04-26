@@ -28,7 +28,7 @@ app.get("/user", (req, res) => {
 
 app.use("/blogs", blogRoutes);
 
-mongoose.connect('mongodb://127.0.0.1:27017').then(() => console.log('Mongodb Connected!'));
+mongoose.connect('mongodb://127.0.0.1:27017/test').then(() => console.log('Mongodb Connected!'));
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
