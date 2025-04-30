@@ -16,10 +16,17 @@ router.post("/", async(req, res) => {
 });
 
 //read all users
+// router.get("/", async(req, res) => {
+//     let allUsers = await User.find();
+//     res.send(allUsers);
+// });
+
 router.get("/", async(req, res) => {
     let allUsers = await User.find();
-    res.send(allUsers);
-});
+    res.render("users", {
+        users : allUsers
+    });
+})
 
 //read one user
 router.get("/:id", async(req, res) => {

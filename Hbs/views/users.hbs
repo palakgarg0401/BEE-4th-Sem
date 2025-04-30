@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User's Details</h1>
+    <ul>
+        {{#if users}}
+        {{!-- loop on variable data --}}
+        {{#each users}}
+        <li>
+            <h3>{{name}}</h3>
+            <h5>{{email}}</h5>
+        </li>
+        {{/each}}
+        {{else}}
+        <h3>No users found</h3>
+        {{/if}}
+    </ul>
+</body>
+</html>
